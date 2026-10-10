@@ -1,0 +1,32 @@
+{
+  "defaultInstance": "demo",
+  "server": {
+    "port": 8787
+  },
+  "instances": [
+    {
+      "id": "demo",
+      "kind": "demo",
+      "label": "Demo company (works with no Tally installed)",
+      "product": "demo"
+    },
+    {
+      "id": "prime",
+      "kind": "tally-xml",
+      "label": "TallyPrime or ERP 9 on this machine (XML port 9000)",
+      "product": "tallyprime",
+      "host": "127.0.0.1",
+      "port": 9000,
+      "timeoutSeconds": 30
+    },
+    {
+      "id": "archive",
+      "kind": "tallyweb-file",
+      "label": "On-disk .1800/.900 files via the TallyWeb backend (port 9090)",
+      "product": "erp9",
+      "baseUrl": "http://127.0.0.1:9090",
+      "username": "admin",
+      "password": "admin"
+    }
+  ]
+}
